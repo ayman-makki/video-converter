@@ -98,7 +98,11 @@
         }
       ],
       "icon": "resources/icons/icon.icns",
-      "category": "public.app-category.video"
+      "category": "public.app-category.video",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist"
     },
     "linux": {
       "target": [
