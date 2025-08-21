@@ -1,0 +1,160 @@
+/* ConversionQueue.css */
+.conversion-queue {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.queue-header .ant-typography {
+  margin: 0;
+}
+
+.queue-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.queue-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.task-list .ant-list-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.task-card {
+  width: 100%;
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task-status-converting {
+  border-left: 4px solid #52c41a;
+}
+
+.task-status-completed {
+  border-left: 4px solid #1890ff;
+}
+
+.task-status-error {
+  border-left: 4px solid #ff4d4f;
+}
+
+.task-status-paused {
+  border-left: 4px solid #faad14;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.task-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.task-filename {
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.task-path {
+  font-size: 12px;
+  line-height: 1.3;
+  word-break: break-all;
+}
+
+.task-actions {
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.task-file-info {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.task-controls {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.task-progress {
+  margin-top: 8px;
+}
+
+.progress-details {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.completion-info,
+.error-info,
+.pause-info {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.empty-queue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #999;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .queue-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .task-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .task-actions {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+  
+  .task-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

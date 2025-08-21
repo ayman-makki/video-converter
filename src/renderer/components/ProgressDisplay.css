@@ -1,0 +1,114 @@
+/* ProgressDisplay.css */
+.progress-display {
+  width: 100%;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-header .ant-typography {
+  margin: 0;
+}
+
+.progress-status {
+  font-size: 12px;
+  font-weight: 500;
+  color: #52c41a;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.progress-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-center {
+  text-align: center;
+}
+
+.progress-percent {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.progress-label {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.progress-details {
+  margin-top: 16px;
+}
+
+.progress-metric {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #fafafa;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.progress-metric:last-child {
+  margin-bottom: 0;
+}
+
+.progress-metric .anticon {
+  color: #1890ff;
+  margin-right: 8px;
+}
+
+.current-task {
+  margin-top: 8px;
+  padding: 8px;
+  background: #f0f9ff;
+  border-radius: 4px;
+  border-left: 3px solid #1890ff;
+}
+
+.progress-idle,
+.progress-completed {
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.progress-idle {
+  background: #fafafa;
+  color: #666;
+}
+
+.progress-completed {
+  background: #f6ffed;
+  color: #52c41a;
+  border: 1px solid #b7eb8f;
+}
+
+@media (max-width: 768px) {
+  .progress-content .ant-progress-circle {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  
+  .progress-percent {
+    font-size: 16px;
+  }
+  
+  .progress-metric {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}

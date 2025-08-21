@@ -1,0 +1,80 @@
+/* FileDropZone.css */
+.file-drop-zone {
+  width: 100%;
+}
+
+.drop-zone {
+  border: 2px dashed #d9d9d9;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  min-height: 200px;
+}
+
+.drop-zone:hover {
+  border-color: #40a9ff;
+  background: #f0f9ff;
+}
+
+.drop-zone.drag-active {
+  border-color: #1890ff;
+  background: #e6f7ff;
+  transform: scale(1.02);
+}
+
+.drop-zone.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.drop-zone.disabled:hover {
+  border-color: #d9d9d9;
+  background: #fafafa;
+  transform: none;
+}
+
+.drop-zone-content {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.ant-upload-drag-icon {
+  margin-bottom: 16px;
+}
+
+.ant-upload-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.drop-zone.disabled .ant-upload-text {
+  color: #999;
+}
+
+.ant-upload-hint {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.supported-formats {
+  font-size: 12px;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .drop-zone-content {
+    padding: 24px 12px;
+  }
+  
+  .ant-upload-text {
+    font-size: 14px;
+  }
+  
+  .supported-formats {
+    font-size: 11px;
+  }
+}

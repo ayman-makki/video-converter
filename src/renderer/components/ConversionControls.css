@@ -1,0 +1,95 @@
+/* ConversionControls.css */
+.conversion-controls {
+  width: 100%;
+}
+
+.controls-header {
+  margin-bottom: 16px;
+}
+
+.controls-header .ant-typography {
+  margin: 0;
+}
+
+.controls-stats {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.stat-item {
+  text-align: center;
+  min-width: 60px;
+}
+
+.stat-item .ant-typography {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.controls-buttons {
+  width: 100%;
+}
+
+.controls-buttons .ant-btn {
+  font-weight: 500;
+}
+
+.controls-buttons .ant-btn-primary {
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border: none;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.controls-buttons .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #40a9ff 0%, #1890ff 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.controls-buttons .ant-btn-primary:disabled {
+  background: #f5f5f5;
+  transform: none;
+  box-shadow: none;
+}
+
+.controls-buttons .ant-btn-dangerous {
+  background: linear-gradient(135deg, #ff4d4f 0%, #f5222d 100%);
+  border: none;
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 77, 79, 0.3);
+}
+
+.controls-buttons .ant-btn-dangerous:hover {
+  background: linear-gradient(135deg, #ff7875 0%, #ff4d4f 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.4);
+}
+
+.controls-disabled-notice {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff7e6;
+  border: 1px solid #ffd591;
+  border-radius: 6px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .controls-stats {
+    padding: 8px;
+  }
+  
+  .stat-item {
+    min-width: 50px;
+  }
+  
+  .controls-buttons .ant-space-compact {
+    flex-direction: column;
+  }
+  
+  .controls-buttons .ant-space-compact .ant-btn {
+    width: 100%;
+  }
+}

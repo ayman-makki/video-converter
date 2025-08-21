@@ -1,0 +1,83 @@
+/* App.css */
+.app-layout {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.app-content {
+  padding: 0;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+}
+
+.loading-container p {
+  margin: 0;
+  font-size: 16px;
+  color: #666;
+}
+
+.main-container {
+  display: flex;
+  min-height: calc(100vh - 64px);
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.left-panel {
+  flex: 0 0 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 100%;
+}
+
+.right-panel {
+  flex: 1;
+  min-height: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+  
+  .left-panel {
+    flex: none;
+    height: auto;
+  }
+  
+  .right-panel {
+    flex: none;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .left-panel {
+    flex: none;
+  }
+  
+  .right-panel {
+    height: 300px;
+  }
+}

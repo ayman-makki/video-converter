@@ -1,0 +1,68 @@
+/* HeaderBar.css */
+.header-bar {
+  background: linear-gradient(135deg, #001529 0%, #002140 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0 24px;
+  height: 64px;
+  line-height: 64px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left .ant-typography {
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right .ant-badge-status-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+
+.header-right .ant-tag {
+  margin: 0;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.header-right .anticon {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 768px) {
+  .header-bar {
+    padding: 0 16px;
+  }
+  
+  .header-left .ant-typography {
+    font-size: 18px;
+  }
+  
+  .header-right {
+    gap: 8px;
+  }
+  
+  .header-right .ant-tag {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+}
