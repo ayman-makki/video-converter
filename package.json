@@ -34,19 +34,15 @@
     "directories": {
       "output": "dist/packages"
     },
+    "compression": "maximum",
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
     "files": [
       "dist/**/*",
-      "node_modules/electron-store/**/*",
-      "node_modules/conf/**/*",
-      "node_modules/fluent-ffmpeg/**/*",
-      "node_modules/systeminformation/**/*",
-      "node_modules/cross-spawn/**/*",
-      "node_modules/mime-types/**/*",
-      "node_modules/path-exists/**/*",
-      "node_modules/uuid/**/*",
-      "resources/ffmpeg/**/*",
-      "!resources/ffmpeg/**/*.md",
-      "!resources/ffmpeg/**/LICENSE*",
+      "!dist/**/*.map",
+      "!dist/**/*.d.ts",
       "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
       "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
       "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
@@ -55,12 +51,18 @@
       "!src/**/*",
       "!webpack*.js",
       "!tsconfig.json",
-      "!*.config.js"
+      "!*.config.js",
+      "!node_modules/**/*"
+    ],
+    "asarUnpack": [
+      "**/node_modules/fluent-ffmpeg/**",
+      "**/node_modules/systeminformation/**"
     ],
     "extraResources": [
       {
-        "from": "resources/ffmpeg",
-        "to": "ffmpeg"
+        "from": "resources/ffmpeg/${os}-${arch}",
+        "to": "ffmpeg",
+        "filter": ["**/*"]
       }
     ],
     "win": {
@@ -88,21 +90,12 @@
             "x64",
             "arm64"
           ]
-        },
-        {
-          "target": "zip",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
         }
       ],
       "icon": "resources/icons/icon.icns",
       "category": "public.app-category.video",
       "hardenedRuntime": true,
-      "gatekeeperAssess": false,
-      "entitlements": "build/entitlements.mac.plist",
-      "entitlementsInherit": "build/entitlements.mac.plist"
+      "gatekeeperAssess": false
     },
     "linux": {
       "target": [
