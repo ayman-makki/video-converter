@@ -63,9 +63,8 @@
     ],
     "extraResources": [
       {
-        "from": "resources/ffmpeg/${os}-${arch}",
-        "to": "ffmpeg",
-        "filter": ["**/*"]
+        "from": "resources/ffmpeg",
+        "to": "ffmpeg"
       }
     ],
     "win": {
