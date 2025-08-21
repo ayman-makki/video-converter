@@ -43,6 +43,14 @@
       "dist/**/*",
       "!dist/**/*.map",
       "!dist/**/*.d.ts",
+      "node_modules/electron-store/**/*",
+      "node_modules/conf/**/*",
+      "node_modules/fluent-ffmpeg/**/*",
+      "node_modules/systeminformation/**/*",
+      "node_modules/cross-spawn/**/*",
+      "node_modules/mime-types/**/*",
+      "node_modules/path-exists/**/*",
+      "node_modules/uuid/**/*",
       "!**/{.DS_Store,.git,.hg,.svn,CVS,RCS,SCCS,.gitignore,.gitattributes}",
       "!**/{__pycache__,thumbs.db,.flowconfig,.idea,.vs,.nyc_output}",
       "!**/{npm-debug.log,yarn.lock,.yarn-integrity,.yarn-metadata.json}",
@@ -51,12 +59,7 @@
       "!src/**/*",
       "!webpack*.js",
       "!tsconfig.json",
-      "!*.config.js",
-      "!node_modules/**/*"
-    ],
-    "asarUnpack": [
-      "**/node_modules/fluent-ffmpeg/**",
-      "**/node_modules/systeminformation/**"
+      "!*.config.js"
     ],
     "extraResources": [
       {
